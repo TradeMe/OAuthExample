@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "MyTradeMeSummary";
+}
+@if (ViewBag.Error != null)
+{
+    <h2>An error occurred</h2>
+    <p>@Html.Raw(ViewBag.Error)</p>
+}
+else
+{
+    <h2>MyTradeMeSummary</h2>
+    <pre>My Trade Me summary: @ViewBag.Response</pre>
+}
+

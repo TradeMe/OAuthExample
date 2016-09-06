@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "AuthorizeToken";
+}
+@if (ViewBag.Error != null)
+{
+    <h2>An error occurred</h2>
+    <p>@Html.Raw(ViewBag.Error)</p>
+}
+else
+{
+    <h2>Your final AccessTokens</h2>
+    <h3>oauthToken: @ViewBag.AccessToken</h3>
+    <h3>oauthToken secret: @ViewBag.AccessTokenSecret</h3>
+    <p>These are ACCESS tokens, they are the final tokens and can be used to authenticate as the user that they represent</p>
+
+    <p><a class="btn btn-default" href="../OAuth/MyTradeMeSummary">Get my Trade Me summary!&raquo;</a></p>
+}

@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+@if (ViewBag.HasError == true)
+{
+
+    <h2>Error Message: </h2><br/>
+    <p>@ViewBag.ErrorMessage</p>
+    <h2>Status code: </h2><br/>
+    <p>@ViewBag.StatusCode</p>
+    <h2>Help Message: </h2><br/>
+    <p>@ViewBag.HelpMessage</p>
+    
+
+}
+else
+{
+    <h2>@ViewBag.Title.</h2>
+    <h3>request token: @ViewBag.RequestToken</h3>
+    <h3>request token secret: @ViewBag.RequestTokenSecret</h3>
+
+
+    <a href="@ViewBag.AuthorizeUrl">click here to authorize access to your account</a>
+
+}
